@@ -13,7 +13,6 @@
 	<include filename="o-button-templates.xml"/>
 	<include filename="o-openatv.xml"/>
 	<include filename="o-legacy.xml"/>
-	<!-- <include filename="o-vix.xml"/> -->
 	<include filename="o-wizards.xml"/>
 	<include filename="o-menus.xml"/>
 	<include filename="o-infopanel.xml"/>
@@ -24,11 +23,9 @@
 	<include filename="o-infobar.xml"/>
 	<include filename="o-plugins.xml"/>
 	<include filename="o-network.xml"/>
-	<include filename="o-eventview.xml"/>
-	<include filename="o-information.xml"/>
-	<include filename="o-cccam.xml"/>
-	<include filename="o-toppicks.xml"/>
 	<include filename="o-picons.xml"/>
+	<include filename="o-toppicks.xml"/>
+	<!-- <include filename="o-vix.xml"/> -->
 	<!-- fonts -->
 	<fonts>
 		<!-- default skin fonts -->
