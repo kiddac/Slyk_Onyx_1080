@@ -424,9 +424,8 @@ self.instance.move(ePoint((desktop_w-wsizex)//2, (desktop_h-wsizey)//2))</applet
 				}
 			</convert>
 		</widget>
-		<widget name="buttonlist" position="527,270" size="942,50" font="Regualr;35" halign="center" zPosition="2" foregroundColor="white" backgroundColor="black" transparent="0"/>
+		<widget name="buttonlist" position="527,270" size="942,50" font="Regular;35" halign="center" zPosition="2" foregroundColor="white" backgroundColor="black" transparent="0"/>
 		<panel name="wizard_rc_templateNew"/>
-		<panel name="New-Buttons"/>
 	</screen>
 	<!-- infobar.py infobar - o-infobar.xml -->
 	<!-- infobar.py movieplayer - o-movies.xml -->
