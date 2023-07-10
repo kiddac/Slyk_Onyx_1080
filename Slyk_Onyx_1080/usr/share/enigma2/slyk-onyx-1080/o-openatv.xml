@@ -18,24 +18,22 @@
 		<ePixmap pixmap="div-h.png" position="0,204" size="780,6" alphatest="blend"/>
 		<widget source="streams" render="Listbox" position="60,225" size="705,180" foregroundColor="white" backgroundColor="messageboxbg" foregroundColorSelected="white" backgroundColorSelected="bg-selected" selectionPixmap="o-selectbars/select-470-30.png" itemHeight="45" transparent="1" scrollbarMode="showNever">
 			<convert type="TemplatedMultiContent">{"templates":
-				{"default": (45, [
-			
-				MultiContentEntryText(pos = (15, 3), size = (75, 45), font = 0, flags = RT_HALIGN_LEFT, text = 2), # number,
-				MultiContentEntryText(pos = (90, 3), size = (150, 45), font = 0, flags = RT_HALIGN_LEFT, text = 3), # description,
-				MultiContentEntryText(pos = (240, 3), size = (375, 45), font = 0, flags = RT_HALIGN_LEFT, text = 4), # language,
-				MultiContentEntryText(pos = (615, 3), size = (75, 45), font = 1, flags = RT_HALIGN_RIGHT, text = 5), # selection,
-				], True, "showNever"),
-				"notselected": (45, [
-			
-				MultiContentEntryText(pos = (15, 3), size = (75, 45), font = 0, flags = RT_HALIGN_LEFT, text = 2), # number,
-				MultiContentEntryText(pos = (90, 3), size = (150, 45), font = 0, flags = RT_HALIGN_LEFT, text = 3), # description,
-				MultiContentEntryText(pos = (240, 3), size = (375, 45), font = 0, flags = RT_HALIGN_LEFT, text = 4), # language,
-				MultiContentEntryText(pos = (615, 3), size = (75, 45), font = 1, flags = RT_HALIGN_RIGHT, text = 5), # selection,
-				], False, "showNever")
-				},
-				"fonts": [gFont("Regular", 30), gFont("Regular", 30)],
-				"itemHeight": 45
-				}</convert>
+			{"default": (45, [
+			MultiContentEntryText(pos = (15, 3), size = (75, 45), font = 0, flags = RT_HALIGN_LEFT, text = 2), # number,
+			MultiContentEntryText(pos = (90, 3), size = (150, 45), font = 0, flags = RT_HALIGN_LEFT, text = 3), # description,
+			MultiContentEntryText(pos = (240, 3), size = (375, 45), font = 0, flags = RT_HALIGN_LEFT, text = 4), # language,
+			MultiContentEntryText(pos = (615, 3), size = (75, 45), font = 1, flags = RT_HALIGN_RIGHT, text = 5), # selection,
+			], True, "showNever"),
+			"notselected": (45, [
+			MultiContentEntryText(pos = (15, 3), size = (75, 45), font = 0, flags = RT_HALIGN_LEFT, text = 2), # number,
+			MultiContentEntryText(pos = (90, 3), size = (150, 45), font = 0, flags = RT_HALIGN_LEFT, text = 3), # description,
+			MultiContentEntryText(pos = (240, 3), size = (375, 45), font = 0, flags = RT_HALIGN_LEFT, text = 4), # language,
+			MultiContentEntryText(pos = (615, 3), size = (75, 45), font = 1, flags = RT_HALIGN_RIGHT, text = 5), # selection,
+			], False, "showNever")
+			},
+			"fonts": [gFont("Regular", 30), gFont("Regular", 30)],
+			"itemHeight": 45
+			}</convert>
 		</widget>
 	</screen>
 	<!-- subtitles button - red button -->
@@ -236,11 +234,11 @@ self.instance.move(ePoint((desktop_w-wsizex)//2, (desktop_h-wsizey)//2))</applet
 		<panel name="active-block"/>
 		<widget source="list" render="Listbox" position="527,537" size="942,432" foregroundColor="white" backgroundColor="mid" foregroundColorSelected="white" backgroundColorSelected="bg-selected" selectionPixmap="o-selectbars/select-628-48.png" backgroundPixmap="o-selectbars/blank.png" itemHeight="72" scrollbarMode="showNever" transparent="1" zPosition="2">
 			<convert type="TemplatedMultiContent">{"template": [
-				 MultiContentEntryText(pos = (15, 12), size = (912, 45), font=0, text = 0),
-				],
-				"fonts": [gFont("Regular",35)],
-				"itemHeight": 72
-				}</convert>
+			MultiContentEntryText(pos = (15, 12), size = (912, 45), font=0, text = 0),
+			],
+			"fonts": [gFont("Regular",35)],
+			"itemHeight": 72
+			}</convert>
 		</widget>
 		<panel name="New-Buttons"/>
 	</screen>
@@ -530,12 +528,12 @@ self.instance.move(ePoint((desktop_w-wsizex)//2, (desktop_h-wsizey)//2))</applet
 		<ePixmap pixmap="o-backgrounds/setup-60-bg.png" alphatest="blend" position="527,344" size="942,630" zPosition="-1"/>
 		<widget source="list" render="Listbox" position="527,345" size="942,630" foregroundColor="white" backgroundColor="mid" backgroundColorSelected="bg-selected" selectionPixmap="o-selectbars/select-628-60.png" backgroundPixmap="o-selectbars/blank.png" enableWrapAround="1" scrollbarMode="showNever" transparent="1">
 			<convert type="TemplatedMultiContent">{"template": [
-                                                MultiContentEntryPixmapAlphaBlend(pos = (15, 9), size = (72, 72), png = 2), # index 2 is the interface pixmap
-						MultiContentEntryText(pos = (105, 0), size = (825, 90), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 1),  # index 1 is the interface name
-					],
-			                "fonts": [gFont("Regular", 30),gFont("Regular", 24)],
-                                        "itemHeight": 90
-				}</convert>
+			MultiContentEntryPixmapAlphaBlend(pos = (15, 9), size = (72, 72), png = 2), # index 2 is the interface pixmap
+			MultiContentEntryText(pos = (105, 0), size = (825, 90), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 1),  # index 1 is the interface name
+			],
+			"fonts": [gFont("Regular", 30),gFont("Regular", 24)],
+			"itemHeight": 90
+			}</convert>
 		</widget>
 		<widget source="introduction" render="Label" position="1518,341" size="372,510" font="Regular;27" foregroundColor="colour2" backgroundColor="midright" transparent="1"/>
 		<panel name="New-Buttons"/>
@@ -658,13 +656,13 @@ self.instance.move(ePoint((desktop_w-wsizex)//2, (desktop_h-wsizey)//2))</applet
 		<ePixmap pixmap="o-backgrounds/setup-100row-bg.png" alphatest="blend" position="527,344" size="942,600" zPosition="1"/>
 		<widget source="list" render="Listbox" position="527,345" size="942,600" foregroundColor="white" backgroundColor="mid" foregroundColorSelected="white" backgroundColorSelected="bg-selected" selectionPixmap="o-selectbars/select-628-100.png" backgroundPixmap="o-selectbars/blank.png" itemHeight="150" scrollbarMode="showNever" transparent="1" zPosition="2">
 			<convert type="TemplatedMultiContent">{"template": [
-				 MultiContentEntryText(pos = (90, 18), size = (837, 38), font=0, text = 0),
-				 MultiContentEntryText(pos = (90, 57), size = (837, 75), font=1, flags = RT_VALIGN_TOP, text = 1),
-				 MultiContentEntryPixmapAlphaBlend(pos = (15, 23), size = (60, 60), png = 2),
-				],
-				"fonts": [gFont("Bold",30),gFont("Regular",30)],
-				"itemHeight": 150
-				}</convert>
+			MultiContentEntryText(pos = (90, 18), size = (837, 38), font=0, text = 0),
+			MultiContentEntryText(pos = (90, 57), size = (837, 75), font=1, flags = RT_VALIGN_TOP, text = 1),
+			MultiContentEntryPixmapAlphaBlend(pos = (15, 23), size = (60, 60), png = 2),
+			],
+			"fonts": [gFont("Bold",30),gFont("Regular",30)],
+			"itemHeight": 150
+			}</convert>
 		</widget>
 		<widget name="lab1" zPosition="2" position="527,345" size="942,600" font="Regular;35" backgroundColor="mid" foregroundColor="white" valign="center" halign="center" transparent="1"/>
 		<panel name="New-Buttons"/>
@@ -837,12 +835,12 @@ self.instance.move(ePoint((desktop_w-wsizex)//2, (desktop_h-wsizey)//2))</applet
 		<ePixmap pixmap="o-backgrounds/setup-100row-bg.png" alphatest="blend" position="527,329" size="942,600" zPosition="1"/>
 		<widget source="nimlist" render="Listbox" position="527,330" size="942,600" foregroundColor="white" backgroundColor="mid" foregroundColorSelected="white" backgroundColorSelected="bg-selected" selectionPixmap="o-selectbars/select-628-100.png" backgroundPixmap="o-selectbars/blank.png" itemHeight="150" scrollbarMode="showNever" transparent="1" zPosition="2">
 			<convert type="TemplatedMultiContent">{"template": [
-				MultiContentEntryText(pos = (15,15), size = (912,45), flags = RT_HALIGN_LEFT, text = 1), # index 1 is the nim name,
-				MultiContentEntryText(pos = (30,60), size = (1182,75), font = 1, flags = RT_HALIGN_LEFT, text = 2), # index 2 is a description of the nim settings,
-				],
-				"fonts": [gFont("Regular",35), gFont("Regular",30)],
-				"itemHeight": 150
-				}</convert>
+			MultiContentEntryText(pos = (15,15), size = (912,45), flags = RT_HALIGN_LEFT, text = 1), # index 1 is the nim name,
+			MultiContentEntryText(pos = (30,60), size = (1182,75), font = 1, flags = RT_HALIGN_LEFT, text = 2), # index 2 is a description of the nim settings,
+			],
+			"fonts": [gFont("Regular",35), gFont("Regular",30)],
+			"itemHeight": 150
+			}</convert>
 		</widget>
 		<panel name="New-Buttons"/>
 	</screen>
@@ -929,16 +927,15 @@ self.instance.move(ePoint((desktop_w-wsizex)//2, (desktop_h-wsizey)//2))</applet
 		<panel name="h-separator-tr"/>
 		<widget source="list" render="Listbox" position="527,321" size="942,648" font="Regular;35" foregroundColor="white" backgroundColor="mid" foregroundColorSelected="white" backgroundColorSelected="bg-selected" selectionPixmap="o-selectbars/select-628-48-full.png" backgroundPixmap="o-selectbars/blank.png" itemHeight="72" enableWrapAround="1" scrollbarMode="showNever" transparent="1" zPosition="2">
 			<convert type="TemplatedMultiContent">{"template": [
-	                	                MultiContentEntryPixmapAlphaBlend(pos = (15, 3), size = (60, 60), png = 4), # index 4 is the status pixmap
-						MultiContentEntryText(pos = (90, 2), size = (815, 42), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 0,  color = 0x00ffffff, color_sel = 0x00ffffff), # index 0 is the name
-						MultiContentEntryText(pos = (90, 38), size = (815, 30), font=1, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 2, color = 0x00ffffff, color_sel = 0x00ffffff), # index 2 is the description
-					
-						MultiContentEntryPixmapAlphaBlend(pos = (0, 72), size = (942, 0), png = 5), # index 5 is the div pixmap
-					],
-				"fonts": [gFont("Regular",30),gFont("Regular",24)],
-				"itemHeight": 72,
-				"scrollbarMode": "showNever"
-				}</convert>
+			MultiContentEntryPixmapAlphaBlend(pos = (15, 3), size = (60, 60), png = 4), # index 4 is the status pixmap
+			MultiContentEntryText(pos = (90, 2), size = (815, 42), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 0,  color = 0x00ffffff, color_sel = 0x00ffffff), # index 0 is the name
+			MultiContentEntryText(pos = (90, 38), size = (815, 30), font=1, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 2, color = 0x00ffffff, color_sel = 0x00ffffff), # index 2 is the description
+			MultiContentEntryPixmapAlphaBlend(pos = (0, 72), size = (942, 0), png = 5), # index 5 is the div pixmap
+			],
+			"fonts": [gFont("Regular",30),gFont("Regular",24)],
+			"itemHeight": 72,
+			"scrollbarMode": "showNever"
+			}</convert>
 		</widget>
 		<panel name="New-Buttons"/>
 		<ePixmap name="ok" pixmap="buttons/key_ok.png" position="1148,1028" size="38,38" alphatest="blend" zPosition="10"/>
@@ -1134,30 +1131,4 @@ self.instance.move(ePoint((desktop_w-wsizex)//2, (desktop_h-wsizey)//2))</applet
 		<panel name="ListTemplate"/>
 		<panel name="New-Buttons"/>
 	</screen>
-	<screen name="Multiboot" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="transparent">
-		<panel name="Setup-Default"/>
-		<widget source="labe14" render="Label" position="1518,341" size="372,200" font="Regular;27" foregroundColor="colour2" backgroundColor="midright" transparent="1"/>
-		<widget source="labe15" render="Label" position="1518,541" size="372,400" font="Regular;27" foregroundColor="colour2" backgroundColor="midright" transparent="1"/>
-	</screen>
-	<screen name="Multiboot Image Selector" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="transparent">
-		<panel name="Setup-Default"/>
-		<widget source="description" render="Label" position="1518,341" size="372,200" font="Regular;27" foregroundColor="colour2" backgroundColor="midright" transparent="1"/>
-		<widget source="options" render="Label" position="1518,541" size="372,400" font="Regular;27" foregroundColor="colour2" backgroundColor="midright" transparent="1"/>
-	</screen>
-	<screen name="CableScanScreen" position="0,0" size="1920,1080" backgroundColor="transparent" flags="wfNoBorder">
-		<panel name="Setup-Default"/>
-		<widget name="introduction" position="1518,341" size="372,510" font="Regular;27" foregroundColor="colour2" backgroundColor="midright" transparent="1"/>
-	</screen>
-	<screen name="CableScanStatus" position="0,0" size="1920,1080" backgroundColor="mid" flags="wfNoBorder">
-		<panel name="template1"/>
-		<panel name="h-separator-tr"/>
-		<panel name="title2"/>
-		<ePixmap pixmap="o-backgrounds/2box.png" alphatest="blend" position="507,62" size="947,168" zPosition="1"/>
-		<widget name="frontend" pixmap="icons/scan-c.png" position="525,96" size="96,96" alphatest="blend"/>
-		<widget name="scan_state" position="527,315" size="942,42" font="Regular;30" foregroundColor="white" backgroundColor="mid" transparent="1"/>
-		<widget name="scan_progress" position="527,402" size="942,9" pixmap="o-progressbars/628-progress.png" transparent="1" alphatest="blend" zPosition="3"/>
-		<panel name="New-Buttons"/>
-	</screen>
 </skin>
-
-

@@ -6,14 +6,14 @@
 		<panel name="title2"/>
 		<widget source="list" render="Listbox" position="527,345" size="942,630" foregroundColor="white" backgroundColor="mid" backgroundColorSelected="bg-selected" selectionPixmap="o-selectbars/select-628-60.png" backgroundPixmap="o-selectbars/blank.png" enableWrapAround="1" scrollbarMode="showNever" transparent="1" zPosition="10">
 			<convert type="TemplatedMultiContent">{"template": [
-                                                MultiContentEntryPixmapAlphaBlend(pos = (15, 5), size = (81, 81), png = 3), # index 3 is the interface pixmap
-						MultiContentEntryText(pos = (105, 0), size = (750, 45), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 1), # index 1 is the interfacename
-						MultiContentEntryText(pos = (105, 45), size = (750, 45), font=1, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 2), # index 2 is the description
-						MultiContentEntryPixmapAlphaBlend(pos = (890, 23), size = (38, 36), png = 5), # index 5 is the active pixmap
-					],
-			                "fonts": [gFont("Regular", 30),gFont("Regular", 24)],
-                                        "itemHeight": 90
-				}</convert>
+			MultiContentEntryPixmapAlphaBlend(pos = (15, 5), size = (81, 81), png = 3), # index 3 is the interface pixmap
+			MultiContentEntryText(pos = (105, 0), size = (750, 45), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 1), # index 1 is the interfacename
+			MultiContentEntryText(pos = (105, 45), size = (750, 45), font=1, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 2), # index 2 is the description
+			MultiContentEntryPixmapAlphaBlend(pos = (890, 23), size = (38, 36), png = 5), # index 5 is the active pixmap
+			],
+			"fonts": [gFont("Regular", 30),gFont("Regular", 24)],
+			"itemHeight": 90
+			}</convert>
 		</widget>
 		<widget source="introduction" render="Label" position="1518,341" size="372,510" font="Regular;27" foregroundColor="colour2" backgroundColor="midright" transparent="1"/>
 		<panel name="New-Buttons"/>
@@ -264,13 +264,13 @@
 		<ePixmap pixmap="o-backgrounds/setup-60-bg.png" alphatest="blend" position="527,344" size="942,630" zPosition="-1"/>
 		<widget source="config" render="Listbox" position="527,345" size="942,630" foregroundColor="white" backgroundColor="mid" backgroundColorSelected="bg-selected" selectionPixmap="o-selectbars/select-628-60.png" backgroundPixmap="o-selectbars/blank.png" enableWrapAround="1" scrollbarMode="showNever" transparent="1">
 			<convert type="TemplatedMultiContent">{"template": [
-                                                MultiContentEntryPixmapAlphaBlend(pos = (15, 9), size = (72, 72), png = 3), # index 3 is the status pixmap
-						MultiContentEntryText(pos = (105, 0), size = (825, 45), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 0), # index 0 is the name
-						MultiContentEntryText(pos = (105, 45), size = (825, 45), font=1, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 2), # index 2 is the description
-					],
-			                "fonts": [gFont("Regular", 30),gFont("Regular", 24)],
-                                        "itemHeight": 90
-				}</convert>
+			MultiContentEntryPixmapAlphaBlend(pos = (15, 9), size = (72, 72), png = 3), # index 3 is the status pixmap
+			MultiContentEntryText(pos = (105, 0), size = (825, 45), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 0), # index 0 is the name
+			MultiContentEntryText(pos = (105, 45), size = (825, 45), font=1, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 2), # index 2 is the description
+			],
+			"fonts": [gFont("Regular", 30),gFont("Regular", 24)],
+			"itemHeight": 90
+			}</convert>
 		</widget>
 		<widget source="introduction" render="Label" position="1518,341" size="372,510" font="Regular;27" foregroundColor="colour2" backgroundColor="midright" transparent="1"/>
 		<panel name="New-Buttons"/>
@@ -298,17 +298,16 @@
 		<ePixmap pixmap="o-backgrounds/setup-60-bg.png" alphatest="blend" position="527,344" size="942,630" zPosition="-1"/>
 		<widget source="config" render="Listbox" position="527,435" size="942,540" foregroundColor="white" backgroundColor="mid" backgroundColorSelected="bg-selected" selectionPixmap="o-selectbars/select-628-60.png" backgroundPixmap="o-selectbars/blank.png" enableWrapAround="1" scrollbarMode="showNever" transparent="1" zPosition="1">
 			<convert type="TemplatedMultiContent">{"template": [
-				MultiContentEntryPixmapAlphaBlend(pos = (15, 9), size = (72, 72), png = 0), # index 0 is the isMounted pixmap
-				MultiContentEntryText(pos = (102, 0), size = (338, 45), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 1), # index 1 is the sharename
-				MultiContentEntryText(pos = (102, 45), size = (686, 45), font=1, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 3), # index 3 is the DIRdescription
-				MultiContentEntryText(pos = (447, 2), size = (341, 45), font=0, flags = RT_HALIGN_RIGHT|RT_VALIGN_CENTER, text = 2), # index 2 is the IPdescription
-			
-				MultiContentEntryPixmapAlphaBlend(pos = (803, 27), size = (38, 36), png = 4), # index 4 is the activepng pixmap
-				MultiContentEntryPixmapAlphaBlend(pos = (855, 9), size = (72, 72), png = 5), # index 4 is the mounttype pixmap
-				],
-				"fonts": [gFont("Regular", 30),gFont("Regular", 24)],
-				"itemHeight": 90
-				}</convert>
+			MultiContentEntryPixmapAlphaBlend(pos = (15, 9), size = (72, 72), png = 0), # index 0 is the isMounted pixmap
+			MultiContentEntryText(pos = (102, 0), size = (338, 45), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 1), # index 1 is the sharename
+			MultiContentEntryText(pos = (102, 45), size = (686, 45), font=1, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 3), # index 3 is the DIRdescription
+			MultiContentEntryText(pos = (447, 2), size = (341, 45), font=0, flags = RT_HALIGN_RIGHT|RT_VALIGN_CENTER, text = 2), # index 2 is the IPdescription
+			MultiContentEntryPixmapAlphaBlend(pos = (803, 27), size = (38, 36), png = 4), # index 4 is the activepng pixmap
+			MultiContentEntryPixmapAlphaBlend(pos = (855, 9), size = (72, 72), png = 5), # index 4 is the mounttype pixmap
+			],
+			"fonts": [gFont("Regular", 30),gFont("Regular", 24)],
+			"itemHeight": 90
+			}</convert>
 		</widget>
 		<panel name="New-Buttons"/>
 	</screen>
@@ -319,15 +318,12 @@
 		<ePixmap pixmap="o-backgrounds/setup-60-bg.png" alphatest="blend" position="527,344" size="942,630" zPosition="-1"/>
 		<widget source="config" render="Listbox" position="527,345" size="942,630" foregroundColor="white" backgroundColor="mid" backgroundColorSelected="bg-selected" selectionPixmap="o-selectbars/select-628-60.png" backgroundPixmap="o-selectbars/blank.png" enableWrapAround="1" scrollbarMode="showNever" transparent="1">
 			<convert type="TemplatedMultiContent">{"template": [
-                                                MultiContentEntryPixmapAlphaBlend(pos = (15, 9), size = (72, 72), png = 3), # index 3 is the status pixmap
-						MultiContentEntryText(pos = (105, 0), size = (825, 90), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 0), # index 0 is the name
-					
-					
-					
-					],
-			   "fonts": [gFont("Regular", 30),gFont("Regular", 24)],
-                                                                "itemHeight": 90
-				}</convert>
+			MultiContentEntryPixmapAlphaBlend(pos = (15, 9), size = (72, 72), png = 3), # index 3 is the status pixmap
+			MultiContentEntryText(pos = (105, 0), size = (825, 90), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 0), # index 0 is the name
+			],
+			"fonts": [gFont("Regular", 30),gFont("Regular", 24)],
+			"itemHeight": 90
+			}</convert>
 		</widget>
 		<panel name="New-Buttons"/>
 	</screen>
@@ -344,16 +340,16 @@
 		<widget source="infotext" render="Label" position="1518,341" size="372,510" font="Regular;27" foregroundColor="colour2" backgroundColor="midright" transparent="1"/>
 		<widget source="list" render="Listbox" position="527,345" size="942,630" foregroundColor="white" backgroundColor="mid" backgroundColorSelected="bg-selected" selectionPixmap="o-selectbars/select-628-60.png" backgroundPixmap="o-selectbars/blank.png" enableWrapAround="1" scrollbarMode="showNever" transparent="1">
 			<convert type="TemplatedMultiContent">{"template": [
-				                MultiContentEntryPixmapAlphaBlend(pos = (15, 9), size = (72, 72), png = 1), # index 1 is the expandable/expanded/verticalline icon
-                                                MultiContentEntryText(pos = (102,0), size = (825,90), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER|RT_WRAP, text = 2), # index 2 is the Hostname
-                        	                MultiContentEntryPixmapAlphaBlend(pos = (102, 9), size = (72, 72), png = 5), # index 5 is the nfs/cifs icon
-                                                MultiContentEntryPixmapAlphaBlend(pos = (204, 9), size = (72, 72), png = 6), # index 6 is the isMounted icon
-                                                MultiContentEntryText(pos = (276, 0), size = (651, 45), font=1, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 3), # index 3 is the sharename
-                                                MultiContentEntryText(pos = (276, 45), size = (651, 45), font=2, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 4), # index 4 is the sharedescription
-				        ],
-				        "fonts": [gFont("Regular", 35),gFont("Regular", 30),gFont("Regular", 24)],
-				        "itemHeight": 90
-				}</convert>
+			MultiContentEntryPixmapAlphaBlend(pos = (15, 9), size = (72, 72), png = 1), # index 1 is the expandable/expanded/verticalline icon
+			MultiContentEntryText(pos = (102,0), size = (825,90), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER|RT_WRAP, text = 2), # index 2 is the Hostname
+			MultiContentEntryPixmapAlphaBlend(pos = (102, 9), size = (72, 72), png = 5), # index 5 is the nfs/cifs icon
+			MultiContentEntryPixmapAlphaBlend(pos = (204, 9), size = (72, 72), png = 6), # index 6 is the isMounted icon
+			MultiContentEntryText(pos = (276, 0), size = (651, 45), font=1, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 3), # index 3 is the sharename
+			MultiContentEntryText(pos = (276, 45), size = (651, 45), font=2, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 4), # index 4 is the sharedescription
+			],
+			"fonts": [gFont("Regular", 35),gFont("Regular", 30),gFont("Regular", 24)],
+			"itemHeight": 90
+			}</convert>
 		</widget>
 		<panel name="New-Buttons"/>
 		<panel name="OKButton"/>
@@ -368,16 +364,15 @@
 		<ePixmap pixmap="o-backgrounds/setup-48-bg.png" alphatest="blend" position="527,329" size="942,645" zPosition="1"/>
 		<widget source="list" render="Listbox" position="527,330" size="942,648" font="Regular;35" foregroundColor="white" backgroundColor="mid" backgroundColorSelected="bg-selected" selectionPixmap="o-selectbars/select-628-48-full.png" backgroundPixmap="o-selectbars/blank.png" itemHeight="72" enableWrapAround="1" scrollbarMode="showNever" transparent="1" zPosition="2">
 			<convert type="TemplatedMultiContent">{"template": [
-						MultiContentEntryText(pos = (15, 3), size = (681, 45), font=0, flags = RT_HALIGN_LEFT, text = 0), # index 0 is the essid
-						MultiContentEntryText(pos = (681, 9), size = (270, 30), font=1, flags = RT_HALIGN_LEFT, text = 2), # index 2 is the signal
-						
-						MultiContentEntryText(pos = (15, 36), size = (270, 30), font=1, flags = RT_HALIGN_LEFT, text = 5), # index 5 is the interface
-						MultiContentEntryText(pos = (390, 36), size = (270, 30), font=1, flags = RT_HALIGN_LEFT, text = 4), # index 4 is the encryption
-						MultiContentEntryText(pos = (681,36), size = (270, 30), font=1, flags = RT_HALIGN_LEFT, text = 3), # index 3 is the maxrate
-					],
-				"fonts": [gFont("Regular",30),gFont("Regular",24)],
-				"itemHeight": 72
-				}</convert>
+			MultiContentEntryText(pos = (15, 3), size = (681, 45), font=0, flags = RT_HALIGN_LEFT, text = 0), # index 0 is the essid
+			MultiContentEntryText(pos = (681, 9), size = (270, 30), font=1, flags = RT_HALIGN_LEFT, text = 2), # index 2 is the signal
+			MultiContentEntryText(pos = (15, 36), size = (270, 30), font=1, flags = RT_HALIGN_LEFT, text = 5), # index 5 is the interface
+			MultiContentEntryText(pos = (390, 36), size = (270, 30), font=1, flags = RT_HALIGN_LEFT, text = 4), # index 4 is the encryption
+			MultiContentEntryText(pos = (681,36), size = (270, 30), font=1, flags = RT_HALIGN_LEFT, text = 3), # index 3 is the maxrate
+			],
+			"fonts": [gFont("Regular",30),gFont("Regular",24)],
+			"itemHeight": 72
+			}</convert>
 		</widget>
 		<panel name="New-Buttons"/>
 	</screen>
@@ -413,4 +408,3 @@
 		<widget source="key_red" render="Label" position="75,e-38" size="270,38" valign="center" font="Regular;30" halign="left" noWrap="1" foregroundColor="white" backgroundColor="messageboxbg" transparent="1" zPosition="1"/>
 	</screen>
 </skin>
-

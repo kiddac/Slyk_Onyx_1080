@@ -1,5 +1,6 @@
 <skin>
 	<!-- EpgSelection.py -->
+	<!-- epg single / EPGSearch-->
 	<screen name="EPGSelection" position="0,0" size="1920,1080" backgroundColor="mid" flags="wfNoBorder">
 		<panel name="template1"/>
 		<panel name="title2"/>
@@ -41,7 +42,7 @@
 		<panel name="InfoButton-pos2"/>
 		<applet type="onLayoutFinish">
 self["list"].instance.setItemHeight(66)
-        </applet>
+		</applet>
 	</screen>
 	<!-- QuickEPG - o-infobar.xml -->
 	<screen name="GraphicalEPG" position="0,0" size="1920,1080" backgroundColor="mid" flags="wfNoBorder">
@@ -68,7 +69,7 @@ self["list"].instance.setItemHeight(66)
 		<panel name="InfoButton-pos2"/>
 		<applet type="onLayoutFinish">
 self["bouquetlist"].bouquetNamePadding = 45
-        </applet>
+		</applet>
 	</screen>
 	<screen name="GraphicalEPGPIG" position="0,0" size="1920,1080" backgroundColor="mid" flags="wfNoBorder">
 		<panel name="background"/>
@@ -131,7 +132,7 @@ self["bouquetlist"].bouquetNamePadding = 45
 		<widget name="guidebouquetlist" position="0,0" size="0,0" font="Regular;30" foregroundColor="white" backgroundColor="mid" valign="center" halign="left" noWrap="1" transparent="1" zPosition="2"/>
 		<applet type="onLayoutFinish">
 self["bouquetlist"].bouquetNamePadding = 45
-        </applet>
+		</applet>
 	</screen>
 	<screen name="GraphicalInfoBarEPG" position="0,0" size="1920,1080" backgroundColor="transparent" flags="wfNoBorder">
 		<!-- backgrounds -->
@@ -164,7 +165,7 @@ self["bouquetlist"].bouquetNamePadding = 45
 		<panel name="InfoButton-pos2"/>
 		<applet type="onLayoutFinish">
 self["bouquetlist"].bouquetNamePadding = 30
-        </applet>
+		</applet>
 	</screen>
 	<screen name="EPGSelectionMulti" position="0,0" size="1920,1080" backgroundColor="mid" flags="wfNoBorder">
 		<panel name="template1"/>
@@ -220,9 +221,9 @@ self["bouquetlist"].bouquetNamePadding = 30
 		<applet type="onLayoutFinish">from enigma import eListboxPythonMultiContent, gFont
 self["list"].l.setFont(0, gFont("Regular", 30))	
 self["list"].l.setFont(1, gFont("Regular", 30))	
-self["list"].l.setItemHeight(45)	
+self["list"].l.setItemHeight(45)
 self["bouquetlist"].bouquetNamePadding = 30
-        </applet>
+		</applet>
 	</screen>
 	<screen name="EPGverticalPIG" position="0,0" size="1920,1080" backgroundColor="mid" flags="wfNoBorder" title="Vertical Program Guide">
 		<panel name="EPGvertical"/>
@@ -302,7 +303,7 @@ self["bouquetlist"].bouquetNamePadding = 30
 		<panel name="InfoButton-pos2"/>
 		<applet type="onLayoutFinish">
 self["bouquetlist"].bouquetNamePadding = 45
-        </applet>
+		</applet>
 	</screen>
 	<!-- graphical infobar - multi epg < > info -->
 	<screen name="InfoBarEventView" position="0,0" size="1920,303" backgroundColor="transparent" flags="wfNoBorder" zPosition="1">
