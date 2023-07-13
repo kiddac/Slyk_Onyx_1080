@@ -50,7 +50,7 @@
 		<panel name="h-separator-tl"/>
 	</screen>
 	<screen name="date">
-		<widget source="global.CurrentTime" render="Label" position="0,1005" size="480,75" font="Regular;30" foregroundColor="white" backgroundColor="botleft" valign="center" halign="center" transparent="1">
+		<widget source="global.CurrentTime" render="Label" position="0,1005" size="480,75" font="Regular;27" foregroundColor="white" backgroundColor="botleft" valign="center" halign="center" transparent="1">
 			<convert type="Slyk18ClockToText">Slyk18DateFormat1</convert>
 		</widget>
 	</screen>
@@ -71,7 +71,7 @@
 		<panel name="button-bg"/>
 	</screen>
 	<screen name="config">
-		<widget name="config" textOffset="15,0" position="527,321" size="954,645" font="Regular;32" secondfont="Regular;32" foregroundColor="white" backgroundColor="mid" backgroundColorSelected="bg-selected" selectionPixmap="o-selectbars/select-636-48.png" backgroundPixmap="o-selectbars/blank.png" itemHeight="72" enableWrapAround="1" scrollbarMode="showNever" transparent="1"/>
+		<widget name="config" textOffset="15,0" position="527,321" size="954,645" font="Regular;32" secondfont="Regular;32" foregroundColor="white" backgroundColor="mid" backgroundColorSelected="bg-selected" selectionPixmap="o-selectbars/select-636-48.png" backgroundPixmap="o-selectbars/blank.png" itemHeight="72" enableWrapAround="1" scrollbarMode="showOnDemand" transparent="1"/>
 	</screen>
 	<screen name="config2">
 		<widget name="config" textOffset="15,0" position="527,321" size="942,645" font="Regular;32" secondfont="Regular;32" foregroundColor="white" backgroundColor="mid" backgroundColorSelected="bg-selected" selectionPixmap="o-selectbars/select-628-48.png" backgroundPixmap="o-selectbars/blank.png" itemHeight="72" enableWrapAround="1" scrollbarMode="showNever" transparent="1"/>

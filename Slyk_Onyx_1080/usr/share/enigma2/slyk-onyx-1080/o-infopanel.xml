@@ -82,10 +82,36 @@
 		<widget name="feedstatusRED" position="1568,411" size="269,83" font="Regular;27" valign="center" foregroundColor="white" backgroundColor="midright" transparent="1" zPosition="1"/>
 		<widget name="feedstatusYELLOW" position="1568,411" size="269,83" font="Regular;27" valign="center" foregroundColor="white" backgroundColor="midright" transparent="1" zPosition="1"/>
 		<widget name="feedstatusGREEN" position="1568,411" size="269,83" font="Regular;27" valign="center" foregroundColor="white" backgroundColor="midright" transparent="1" zPosition="1"/>
-		<widget name="key_red_pic" pixmap="buttons/key_red.png" position="509,1028" size="38,38" alphatest="blend" zPosition="10"/>
-		<widget name="key_red" position="554,1025" size="237,38" font="Regular;30" valign="center" halign="left" transparent="1" noWrap="1" foregroundColor="white" backgroundColor="button-bg" zPosition="10"/>
-		<widget name="key_green_pic" pixmap="buttons/key_green.png" position="828,1028" size="38,38" alphatest="blend" zPosition="10"/>
-		<widget name="key_green" position="873,1025" size="237,38" font="Regular;30" valign="center" halign="left" transparent="1" noWrap="1" foregroundColor="white" backgroundColor="button-bg" zPosition="10"/>
+		<panel name="New-Buttons"/>
+	</screen>
+	
+	<screen name="SoftwareUpdate" position="0,0" size="1920,1080" backgroundColor="mid" flags="wfNoBorder" title="Software Panel">
+		<panel name="template1"/>
+		<panel name="h-separator-tr"/>
+		<panel name="title2"/>
+		<ePixmap pixmap="o-backgrounds/setup-48-bg.png" alphatest="blend" position="527,329" size="942,648" zPosition="1"/>
+		<widget source="list" render="Listbox" position="527,330" size="942,648" foregroundColor="white" backgroundColor="mid" foregroundColorSelected="white" backgroundColorSelected="bg-selected" selectionPixmap="o-selectbars/select-628-48-full.png" backgroundPixmap="o-selectbars/blank.png" itemHeight="72" enableWrapAround="1" scrollbarMode="showOnDemand" transparent="1" zPosition="2">
+			<convert type="TemplatedMultiContent">{"template": [
+			MultiContentEntryText(pos = (15, 2), size = (825, 42), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 0,  color = 0x00ffffff, color_sel = 0x00ffffff), # index 0 is the name
+			MultiContentEntryText(pos = (15, 38), size = (825, 30), font=1, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 2, color = 0x00ffffff, color_sel = 0x00ffffff), # index 2 is the description
+			MultiContentEntryPixmapAlphaBlend(pos = (855, 0), size = (72, 72), png = 4), # index 4 is the status pixmap
+			MultiContentEntryPixmapAlphaBlend(pos = (0, 83), size = (942, 0), png = 5), # index 5 is the div pixmap
+			],
+			"fonts": [gFont("Regular",30),gFont("Regular",24)],
+			"itemHeight": 72,
+			"scrollbarMode": "showOnDemand"
+			}</convert>
+		</widget>
+		<ePixmap pixmap="o-backgrounds/sidebar2.png" alphatest="blend" position="1515,329" size="324,168" zPosition="1"/>
+		<widget name="package_text" position="1530,329" size="233,83" font="Regular;27" valign="center" foregroundColor="white" backgroundColor="mid" transparent="1" zPosition="2"/>
+		<widget name="package_count" position="1763,329" size="75,83" font="Regular;27" valign="center" foregroundColor="white" backgroundColor="mid" transparent="1" zPosition="2"/>
+		<widget name="traffic_off" position="1530,440" size="23,24" pixmap="buttons/button_green_off.png" alphatest="blend" zPosition="1"/>
+		<widget name="traffic_red" position="1530,440" size="23,24" pixmap="buttons/button_red.png" alphatest="blend" zPosition="1"/>
+		<widget name="traffic_yellow" position="1530,440" size="23,24" pixmap="buttons/button_yellow.png" alphatest="blend" zPosition="1"/>
+		<widget name="traffic_green" position="1530,440" size="23,24" pixmap="buttons/button_green.png" alphatest="blend" zPosition="1"/>
+		<widget name="feedstatus_red" position="1568,411" size="269,83" font="Regular;27" valign="center" foregroundColor="white" backgroundColor="midright" transparent="1" zPosition="1"/>
+		<widget name="feedstatus_yellow" position="1568,411" size="269,83" font="Regular;27" valign="center" foregroundColor="white" backgroundColor="midright" transparent="1" zPosition="1"/>
+		<widget name="feedstatus_green" position="1568,411" size="269,83" font="Regular;27" valign="center" foregroundColor="white" backgroundColor="midright" transparent="1" zPosition="1"/>
 		<panel name="New-Buttons"/>
 	</screen>
 	<!-- Info Panel Infos -->

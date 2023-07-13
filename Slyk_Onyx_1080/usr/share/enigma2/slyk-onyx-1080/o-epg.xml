@@ -158,9 +158,11 @@ self["bouquetlist"].bouquetNamePadding = 45
 		<widget name="bouquetlist" position="0,795" size="375,210" font="Regular;30" itemHeight="53" foregroundColor="white" foregroundColorSelected="white" backgroundColor="#1a1a24" backgroundColorSelected="#006fce" transparent="1" borderColor="#33333d" borderWidth="2" scrollbarMode="showNever" zPosition="6"/>
 		<panel name="date"/>
 		<panel name="New-Buttons"/>
+		<!--
 		<ePixmap pixmap="o-backgrounds/v-divider.png" position="809 ,1005" size="3,75" alphatest="blend" zPosition="3"/>
 		<ePixmap pixmap="o-backgrounds/v-divider.png" position="1128,1005" size="3,75" alphatest="blend" zPosition="3"/>
 		<ePixmap pixmap="o-backgrounds/v-divider.png" position="1767,1005" size="3,75" alphatest="blend" zPosition="3"/>
+		-->
 		<panel name="MenuButton"/>
 		<panel name="InfoButton-pos2"/>
 		<applet type="onLayoutFinish">
@@ -340,6 +342,12 @@ self["bouquetlist"].bouquetNamePadding = 45
 		<panel position="1683,47" size="207,75">
 			<panel name="channel-icons"/>
 		</panel>
+	</screen>
+	<!-- epg - show bouquet on launch -->
+	<screen name="BouquetSelector" title="Select a bouquet" position="0,0" size="522,1080" backgroundColor="transparent" flags="wfNoBorder">
+		<ePixmap pixmap="o-backgrounds/bouquet.png" position="0,0" size="522,1080" alphatest="blend" zPosition="-1"/>
+		<widget source="Title" render="Label" position="0,0" size="485,240" font="Regular;48" foregroundColor="white" backgroundColor="blackglass" valign="center" halign="center" transparent="1"/>
+		<widget name="menu" textOffset="15,14" position="30,242" size="425,720" font="Regular;35" foregroundColor="white" backgroundColor="blackglass" foregroundColorSelected="white" backgroundColorSelected="blackglass" selectionPixmap="o-selectbars/select-283-48.png" backgroundPixmap="o-selectbars/blank.png" itemHeight="72" enableWrapAround="1" scrollbarMode="showNever" transparent="1"/>
 	</screen>
 	<!-- epg tabs hack - red button popup -->
 	<screen name="OptionDialog" position="center,center" size="360,195" backgroundColor="transparent" flags="wfNoBorder" zPosition="10">
