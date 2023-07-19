@@ -685,13 +685,12 @@ self.instance.move(ePoint((desktop_w - wsizex) // 2, (desktop_h - wsizey) // 2))
 	<!-- MovieSelection - o-movies.xml -->
 	<!-- MultiBooManager.py -->
 	<!-- Multiboot Manager openatv -->
-	<!-- Multiboot Manager openatv -->
 	<screen name="MultiBootManager" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="template1"/>
 		<panel name="h-separator-tr"/>
 		<panel name="whatson-top"/>
 		<panel name="title2"/>
-		<widget name="slotlist" position="527,321" size="954,645" font="Regular;32" foregroundColor="white" backgroundColor="mid" backgroundColorSelected="bg-selected" selectionPixmap="o-selectbars/select-636-48.png" backgroundPixmap="o-selectbars/blank.png" itemHeight="72" enableWrapAround="1" scrollbarMode="showOnDemand" transparent="1"/>
+		<widget name="slotlist" position="527,321" size="960,645" font="Regular;30" foregroundColor="white" backgroundColor="mid" backgroundColorSelected="bg-selected" selectionPixmap="o-selectbars/select-628-30.png"  backgroundPixmap="o-selectbars/blank.png" itemHeight="45" enableWrapAround="1" scrollbarMode="showOnDemand" transparent="1"/>
 		<panel name="New-Buttons"/>
 		<ePixmap pixmap="o-backgrounds/menu-gradient.png" position="527,900" size="954,75" alphatest="blend" zPosition="2"/>
 		<widget name="description" position="1518,341" size="372,510" font="Regular;27" foregroundColor="colour2" backgroundColor="midright" transparent="1"/>

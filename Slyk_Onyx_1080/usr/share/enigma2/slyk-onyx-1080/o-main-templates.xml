@@ -23,6 +23,9 @@
 	<screen name="h-separator-br">
 		<ePixmap pixmap="o-backgrounds/h-divider.png" position="1499,875" size="422,2" alphatest="blend"/>
 	</screen>
+	<screen name="h-separator-bl">
+		<ePixmap pixmap="o-backgrounds/h-divider.png" position="0,875" size="422,2" alphatest="blend"/>
+	</screen>
 	<screen name="v-separator-tr">
 		<ePixmap pixmap="o-backgrounds/v-divider.png" position="1469,42" size="3,213" alphatest="blend"/>
 	</screen>
