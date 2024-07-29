@@ -499,7 +499,7 @@ self.instance.move(ePoint((desktop_w-wsizex)//2, (desktop_h-wsizey)//2))</applet
 	<screen name="PictureInformation" position="0,0" size="1920,1080" title="Picture Information" flags="wfNoBorder" backgroundColor="mid">
 		<panel name="template1"/>
 		<widget name="name" conditional="name" position="540,141" size="1332,840" foregroundColor="white" backgroundColor="mid" font="Console;24" transparent="1" zPosition="1"/>
-		<widget name="picture" position="880,270" size="650,650" alphatest="blend" scaleFlags="scaleCenter" transparent="1" />
+		<widget name="picture" position="880,270" size="650,650" alphatest="blend" scaleFlags="scaleCenter" transparent="1"/>
 		<panel name="New-Buttons"/>
 		<eLabel text="Slyk Onyx 1080 by Kidda C (2019). linuxsat-support.com. Beer kitty. paypal.me/kiddac" font="Regular;33" position="540,80" size="1332,40" foregroundColor="white" backgroundColor="midright" halign="left" transparent="1" zPosition="2"/>
 	</screen>
@@ -690,7 +690,7 @@ self.instance.move(ePoint((desktop_w - wsizex) // 2, (desktop_h - wsizey) // 2))
 		<panel name="h-separator-tr"/>
 		<panel name="whatson-top"/>
 		<panel name="title2"/>
-		<widget name="slotlist" position="527,321" size="960,645" font="Regular;30" foregroundColor="white" backgroundColor="mid" backgroundColorSelected="bg-selected" selectionPixmap="o-selectbars/select-628-30.png"  backgroundPixmap="o-selectbars/blank.png" itemHeight="45" enableWrapAround="1" scrollbarMode="showOnDemand" transparent="1"/>
+		<widget name="slotlist" position="527,321" size="960,645" font="Regular;30" foregroundColor="white" backgroundColor="mid" backgroundColorSelected="bg-selected" selectionPixmap="o-selectbars/select-628-30.png" backgroundPixmap="o-selectbars/blank.png" itemHeight="45" enableWrapAround="1" scrollbarMode="showOnDemand" transparent="1"/>
 		<panel name="New-Buttons"/>
 		<ePixmap pixmap="o-backgrounds/menu-gradient.png" position="527,900" size="954,75" alphatest="blend" zPosition="2"/>
 		<widget name="description" position="1518,341" size="372,510" font="Regular;27" foregroundColor="colour2" backgroundColor="midright" transparent="1"/>
@@ -817,6 +817,75 @@ self.instance.move(ePoint((desktop_w - wsizex) // 2, (desktop_h - wsizey) // 2))
 		<widget name="list" position="527,330" size="942,630" foregroundColor="white" backgroundColor="mid" backgroundColorSelected="bg-selected" selectionPixmap="o-selectbars/select-628-60.png" backgroundPixmap="o-selectbars/blank.png" enableWrapAround="1" scrollbarMode="showNever" itemHeight="90" transparent="1"/>
 		<panel name="OKButton"/>
 		<panel name="whatson-top"/>
+	</screen>
+	<screen name="PluginBrowserList" position="0,0" size="1920,1080" backgroundColor="mid" flags="wfNoBorder" title="Plugin browser">
+		<panel name="template1"/>
+		<ePixmap pixmap="o-backgrounds/setup-60-bg.png" alphatest="blend" position="527,329" size="942,630" zPosition="1"/>
+		<panel name="description"/>
+		<widget source="pluginList" render="Listbox" position="527,330" size="942,630" foregroundColor="white" backgroundColor="mid" backgroundColorSelected="bg-selected" selectionPixmap="o-selectbars/select-628-60.png" backgroundPixmap="o-selectbars/blank.png" enableWrapAround="1" scrollbarMode="showNever" itemHeight="90" transparent="1" zPosition="2">
+			<convert type="TemplatedMultiContent">
+				{
+					"template": [
+						MultiContentEntryPixmapAlphaBlend(pos=(15, 15), size=(150, 60), png=3, flags=BT_SCALE),
+						MultiContentEntryText(pos = (180, 12), size = (750, 45), font=0, flags = RT_HALIGN_LEFT, text = 1),
+						MultiContentEntryText(pos = (180, 45), size = (750, 30), font=1, flags = RT_HALIGN_LEFT, text = 2)
+
+					],
+					"fonts": [gFont("Regular", 30),gFont("Regular", 20)],
+					"itemHeight": 90
+				}
+			</convert>
+		</widget>
+		<panel name="New-Buttons"/>
+		<panel name="MenuButton-pos2"/>
+		<panel name="OKButton"/>
+		<panel name="whatson-top"/>
+	</screen>
+	<screen name="PluginBrowserGrid" position="0,0" size="1920,1080" backgroundColor="mid" flags="wfNoBorder" title="Plugin browser">
+		<panel name="template1"/>
+		<widget name="description" position="540,140" size="1002,195" font="Regular;33" foregroundColor="white" backgroundColor="topmid" transparent="1"/>
+		<widget source="pluginGrid" render="Listbox" position="540,385" size="1332,624" foregroundColor="white" backgroundColor="mid" backgroundColorSelected="bg-selected-text" conditional="pluginGrid" listOrientation="grid" scrollbarMode="showNever" transparent="1">
+			<convert type="TemplatedMultiContent">
+				{
+				"template":
+					[
+					MultiContentEntryText(pos=(0, 0), size=(261, 120), font=0),
+					MultiContentEntryText(pos=(6, 6), size=(249, 108), font=0, backcolor = None),
+					MultiContentEntryPixmapAlphaBlend(pos=(55, 6), size=(150, 60), png=3, flags=BT_SCALE),
+					MultiContentEntryText(pos=(15,72), size=(230, 48), font=0, flags=RT_VALIGN_TOP | RT_HALIGN_CENTER | RT_WRAP, text=1)
+					],
+				"fonts": [parseFont("Regular;18")],
+				"itemWidth": 261,
+				"itemHeight": 120
+				}
+			</convert>
+		</widget>
+		<panel name="New-Buttons"/>
+		<panel name="MenuButton-pos2"/>
+		<panel name="OKButton"/>
+	</screen>
+	<screen name="PluginAction" title="Plugin Browser Action" position="0,0" size="1920,1080" backgroundColor="mid" flags="wfNoBorder">
+		<panel name="template1"/>
+		<widget name="description" position="540,140" size="1002,195" font="Regular;33" foregroundColor="white" backgroundColor="topmid" transparent="1"/>
+		<widget source="plugins" render="Listbox" position="540,385" size="1332,624" foregroundColor="white" backgroundColor="mid" backgroundColorSelected="bg-selected-text" foregroundColorSelected="white" itemHeight="78" font="Regular;33" transparent="1" enableWrapAround="1" scrollbarMode="showNever">
+			<convert type="TemplatedMultiContent">
+				{
+				"template":
+					[
+					MultiContentEntryPixmapAlphaBlend(pos=(15, 0), size=(78, 78), png=6, flags=BT_SCALE),
+					MultiContentEntryText(pos=(120, 0), size=(1212, 78), font=0, flags=RT_VALIGN_CENTER, text=2, color=0xffffff),
+					MultiContentEntryText(pos=(120, 6), size=(858, 30), font=1, flags=RT_VALIGN_CENTER, text=3, color=0xffffff),
+					MultiContentEntryText(pos=(978, 6), size=(210, 30), font=1, flags=RT_VALIGN_CENTER, text=5, color=0xffffff),
+					MultiContentEntryText(pos=(120, 36), size=(1140, 30), font=2, flags=RT_VALIGN_CENTER, text=4, color=0xffffff),
+					MultiContentEntryPixmapAlphaBlend(pos=(1260, 3), size=(72, 72), png=7, flags=BT_SCALE)
+					],
+				"fonts": [parseFont("Regular;30"), parseFont("Regular;24"), parseFont("Regular;21")],
+				"itemHeight": 78
+				}
+			</convert>
+		</widget>
+		<panel name="OKButton"/>
+		<panel name="New-Buttons"/>
 	</screen>
 	<!-- RdsDisplay.py - RdsInfoDisplay RassInteractive - not skinned -->
 	<!-- RestartNetwork.py -->
