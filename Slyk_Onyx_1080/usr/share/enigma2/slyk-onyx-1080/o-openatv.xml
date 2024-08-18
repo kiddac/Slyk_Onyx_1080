@@ -1012,6 +1012,7 @@ self.instance.move(ePoint((desktop_w - wsizex) // 2, (desktop_h - wsizey) // 2))
 		<ePixmap name="ok" pixmap="buttons/key_ok.png" position="1148,1028" size="38,38" alphatest="blend" zPosition="10"/>
 		<widget source="key_ok" render="Label" position="1193,1025" size="237,38" font="Regular;30" valign="center" noWrap="1" foregroundColor="white" backgroundColor="button-bg" transparent="1" zPosition="10"/>
 	</screen>
+	
 	<!-- SkinSelector.py -->
 	<screen name="SkinSelector" position="0,0" size="1920,1080" title="Skin Selector" flags="wfNoBorder" backgroundColor="mid">
 		<panel name="template1"/>
@@ -1024,6 +1025,13 @@ self.instance.move(ePoint((desktop_w - wsizex) // 2, (desktop_h - wsizey) // 2))
 		<panel name="New-Buttons"/>
 		<panel name="OKButton"/>
 	</screen>
+	
+	<screen name="SkinSelection" position="0,0" size="1920,1080" title="Skin Selection" flags="wfNoBorder" backgroundColor="mid">
+		<panel name="Setup"/>
+		<widget name="Image" position="0,0" size="0,0" alphatest="blend" conditional="Image" transparent="1" zPosition="2" />
+		<widget name="preview" position="1515,606" size="324,243" alphatest="blend" conditional="preview" transparent="1" zPosition="3" />
+	</screen>
+	
 	<!-- SleepTimer.py -->
 	<!-- SleepTimerEdit via standby menu -->
 	<screen name="SleepTimerEdit" position="0,0" size="1920,1080" backgroundColor="transparent" flags="wfNoBorder" zPosition="4">
