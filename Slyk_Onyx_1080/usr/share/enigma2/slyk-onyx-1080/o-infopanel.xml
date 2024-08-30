@@ -11,13 +11,46 @@
 	</screen>
 	<!-- ##QuickMenu ## -->
 	<!-- /lib/python/Plugins/Extensions/Infopanel/QuickMenu.py -->
-	<screen name="QuickMenu" position="0,0" size="1920,1080" backgroundColor="mid" flags="wfNoBorder">
+	<screen name="QuickMenu" position="fill" flags="wfNoBorder" backgroundColor="mid">
+		<panel name="QuickMenuOld" conditional="list"/>
+		<panel name="QuickMenuNew" conditional="mainlist"/>
+	</screen>
+	<screen name="QuickMenuOld" position="0,0" size="1920,1080" backgroundColor="mid" flags="wfNoBorder">
 		<panel name="template1"/>
 		<panel name="h-separator-tr"/>
 		<panel name="title2"/>
 		<ePixmap pixmap="o-backgrounds/v-divider.png" alphatest="blend" position="1190,293" size="3,713" zPosition="12"/>
 		<widget name="list" position="527,323" size="626,719" font="Regular;35" foregroundColor="white" backgroundColor="mid" foregroundColorSelected="white" backgroundColorSelected="bg-selected" selectionPixmap="o-selectbars/select-417-48.png" backgroundPixmap="o-selectbars/blank.png" itemHeight="72" enableWrapAround="1" scrollbarMode="showNever" transparent="1" zPosition="2"/>
 		<widget name="sublist" position="1227,323" size="626,719" font="Regular;35" foregroundColor="white" backgroundColor="mid" foregroundColorSelected="white" backgroundColorSelected="bg-selected" selectionPixmap="o-selectbars/select-417-48.png" backgroundPixmap="o-selectbars/blank.png" itemHeight="72" enableWrapAround="1" scrollbarMode="showNever" transparent="1" zPosition="2"/>
+		<widget name="description" position="527,32" size="905,174" foregroundColor="white" backgroundColor="topmid" font="Regular;30" transparent="1" zPosition="3"/>
+		<panel name="New-Buttons"/>
+	</screen>
+	<screen name="QuickMenuNew" position="0,0" size="1920,1080" backgroundColor="mid" flags="wfNoBorder">
+		<panel name="template1"/>
+		<panel name="h-separator-tr"/>
+		<panel name="title2"/>
+		<ePixmap pixmap="o-backgrounds/v-divider.png" alphatest="blend" position="1190,293" size="3,713" zPosition="12"/>
+		<widget source="mainlist" render="Listbox" position="527,323" size="626,719" font="Regular;35" foregroundColor="white" backgroundColor="mid" foregroundColorSelected="white" backgroundColorSelected="bg-selected" selectionPixmap="o-selectbars/select-417-48.png" backgroundPixmap="o-selectbars/blank.png" itemHeight="72" enableWrapAround="1" scrollbarMode="showNever" transparent="1" zPosition="2">
+			<templates>
+				<template name="Default" fonts="Regular;30,Regular;21" itemWidth="626" itemHeight="72">
+					<mode name="default">
+						<pixmap index="2" position="12,6" size="60,60" alpha="blend" scale="centerScaled"/>
+						<text index="0" position="90,2" size="506,39" font="0" verticalAlignment="center"/>
+						<text index="1" position="90,39" size="506,29" font="1" verticalAlignment="center"/>
+					</mode>
+				</template>
+			</templates>
+		</widget>
+		<widget source="sublist" render="Listbox" position="1227,323" size="626,719" font="Regular;35" foregroundColor="white" backgroundColor="mid" foregroundColorSelected="white" backgroundColorSelected="bg-selected" selectionPixmap="o-selectbars/select-417-48.png" backgroundPixmap="o-selectbars/blank.png" itemHeight="72" enableWrapAround="1" scrollbarMode="showNever" transparent="1" zPosition="2">
+			<templates>
+				<template name="Default" fonts="Regular;30,Regular;21" itemWidth="626" itemHeight="72">
+					<mode name="default">
+						<text index="0" position="30,2" size="569,39" font="0" verticalAlignment="center"/>
+						<text index="1" position="30,39" size="569,29" font="1" verticalAlignment="center"/>
+					</mode>
+				</template>
+			</templates>
+		</widget>
 		<widget name="description" position="527,32" size="905,174" foregroundColor="white" backgroundColor="topmid" font="Regular;30" transparent="1" zPosition="3"/>
 		<panel name="New-Buttons"/>
 	</screen>
@@ -84,7 +117,6 @@
 		<widget name="feedstatusGREEN" position="1568,411" size="269,83" font="Regular;27" valign="center" foregroundColor="white" backgroundColor="midright" transparent="1" zPosition="1"/>
 		<panel name="New-Buttons"/>
 	</screen>
-	
 	<screen name="SoftwareUpdate" position="0,0" size="1920,1080" backgroundColor="mid" flags="wfNoBorder" title="Software Panel">
 		<panel name="template1"/>
 		<panel name="h-separator-tr"/>
