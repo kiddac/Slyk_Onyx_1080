@@ -328,14 +328,6 @@ self["menu"].l.setFont(0, gFont("Regular", 30))</applet>
 		<panel name="HelpMenuVIX" conditional="long_key"/>
 		<panel name="HelpMenuATV" conditional="buttonlist"/>
 	</screen>
-	<screen name="HelpMenuVIX" position="fill" flags="wfNoBorder" backgroundColor="mid">
-		<panel name="template1"/>
-		<panel name="h-separator-tr"/>
-		<panel name="title2"/>
-		<widget name="list" textOffset="15,17" position="527,321" size="942,648" foregroundColor="white" backgroundColor="mid" backgroundColorSelected="bg-selected" selectionPixmap="o-selectbars/select-628-48.png" backgroundPixmap="o-selectbars/blank.png" itemHeight="72" font="Regular;35" enableWrapAround="1" scrollbarMode="showNever" transparent="1"/>
-		<widget name="long_key" position="1470,894" size="450,83" font="Regular;35" halign="center" valign="center" foregroundColor="white" backgroundColor="botright" transparent="1"/>
-		<panel name="RemoteControlTemplate"/>
-	</screen>
 	<screen name="HelpMenuATV" position="fill" flags="wfNoBorder" backgroundColor="mid">
 		<panel name="template1"/>
 		<panel name="h-separator-tr"/>
@@ -650,16 +642,11 @@ self.instance.move(ePoint((desktop_w - wsizex) // 2, (desktop_h - wsizey) // 2))
 		<widget name="lab1" zPosition="2" position="527,345" size="942,600" font="Regular;35" backgroundColor="mid" foregroundColor="white" valign="center" halign="center" transparent="1"/>
 		<panel name="New-Buttons"/>
 	</screen>
-	<screen name="VIXDevicesPanel" position="0,0" size="1920,1080" title="Mount Manager" flags="wfNoBorder" backgroundColor="mid">
-		<panel name="HddMount"/>
-	</screen>
+
 	<!-- hhdmounts - setup mounts -->
 	<screen name="DevicePanelConf" position="0,0" size="1920,1080" backgroundColor="mid" flags="wfNoBorder" zPosition="4" title="UserManager">
 		<panel name="Setup-Default"/>
 		<widget name="Linconn" position="527,321" size="954,645" font="Regular;30" foregroundColor="white" backgroundColor="mid" transparent="1"/>
-	</screen>
-	<screen name="VIXDevicePanelConf" position="0,0" size="1920,1080" backgroundColor="mid" flags="wfNoBorder" zPosition="4" title="Choose where to mount your devices to:">
-		<panel name="DevicePanelConf"/>
 	</screen>
 	<!-- MovieSelection.py -->
 	<!-- MovieSelection - o-movies.xml -->
