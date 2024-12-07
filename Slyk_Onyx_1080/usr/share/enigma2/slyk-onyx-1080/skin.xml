@@ -25,7 +25,7 @@
 	<include filename="o-network.xml"/>
 	<include filename="o-picons.xml"/>
 	<include filename="o-toppicks.xml"/>
-	<!-- <include filename="o-vix.xml"/> -->
+	<include filename="o-vix.xml"/>
 	<!-- fonts -->
 	<fonts>
 		<!-- default skin fonts -->

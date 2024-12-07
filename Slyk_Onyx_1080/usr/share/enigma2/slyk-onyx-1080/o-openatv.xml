@@ -173,52 +173,7 @@ self["menu"].l.setFont(0, gFont("Regular", 30))</applet>
 		<panel name="config"/>
 		<panel name="OKButton"/>
 	</screen>
-	<!-- ChoiceBox.py -->
-	<screen name="ChoiceBox" position="center,center" size="780,195" backgroundColor="messageboxbg">
-		<widget name="text" position="0,0" size="780,45" font="Regular;30" foregroundColor="white" backgroundColor="messageboxbg"/>
-		<widget name="list" position="150,150" size="780,0" font="Regular;30" foregroundColor="white" backgroundColor="messageboxbg" foregroundColorSelected="white" backgroundColorSelected="bg-selected-text" enableWrapAround="1" transparent="1" itemHeight="45"/>
-		<applet type="onLayoutFinish">
-from enigma import getDesktop, eSize, ePoint
 
-desktop_w = getDesktop(0).size().width()
-desktop_h = getDesktop(0).size().height()
-listcount = 0
-itemheight = 45
-maxwidth = desktop_w - 120
-minwidth = desktop_w  // 2
-
-listwidth = self["list"].instance.size().width() + 120  # 120 for button width and padding
-if listwidth &gt; maxwidth:
-	listwidth = maxwidth
-	
-if listwidth &lt; minwidth:
-	listwidth = minwidth
-
-if self["list"] and self.list is not None:
-	listcount = len(self.list)
-	
-	if listcount &gt; 10:
-		listcount = 10
-
-if not self["text"].text:
-	textsize = (listwidth, 0)
-else:
-	textsizeoriginal = self["text"].getSize()
-	textsize = (listwidth, textsizeoriginal[1])
-	
-listsize = (listwidth, itemheight*listcount)
-
-self["text"].instance.resize(eSize(*textsize))
-self["list"].instance.resize(eSize(*listsize))
-self["text"].instance.move(ePoint(0, 0))
-self["list"].instance.move(ePoint(0, textsize[1] + 30))
-
-wsizex = listwidth
-wsizey = textsize[1] + listsize[1] + 60
-wsize = (wsizex, wsizey)
-self.instance.resize(eSize(*wsize))
-self.instance.move(ePoint((desktop_w-wsizex)//2, (desktop_h-wsizey)//2))</applet>
-	</screen>
 	<!-- Ci.py - missing MMIDialog - CiSelection - CIHelperSetup -->
 	<!-- Console.py -->
 	<screen name="Console" position="0,0" size="1920,1080" flags="wfNoBorder" title="Console" backgroundColor="mid">
@@ -1260,5 +1215,66 @@ self.instance.move(ePoint((desktop_w - wsizex) // 2, (desktop_h - wsizey) // 2))
 		<panel name="title2"/>
 		<panel name="ListTemplate"/>
 		<panel name="New-Buttons"/>
+	</screen>
+
+	<screen name="ImageBackup" position="0,0" size="1920,1080" title="Image Backup" flags="wfNoBorder" backgroundColor="mid">
+		<panel name="ATVImageBackup" conditional="config"/>
+		<panel name="VIXImageBackup" conditional="list"/>
+	</screen>
+	<!-- Backup Image-->
+	<screen name="ATVImageBackup" position="0,0" size="1920,1080" title="Image Backup" flags="wfNoBorder" backgroundColor="mid">
+		<panel name="Setup-Default"/>
+		<widget source="description" render="Label" position="1518,341" size="372,510" font="Regular;27" foregroundColor="colour2" backgroundColor="midright" transparent="1"/>
+	</screen>
+	<screen name="ChoiceBox" position="center,center" size="900,720" zPosition="5">
+		<panel name="ATVChoiceBox" conditional="cancelAction"/>
+		<panel name="VIXChoiceBox" conditional="description"/>
+	</screen>
+	
+	<!-- ChoiceBox.py -->
+	<screen name="ATVChoiceBox" position="center,center" size="780,195" backgroundColor="messageboxbg">
+		<widget name="text" position="0,0" size="780,45" font="Regular;30" foregroundColor="white" backgroundColor="messageboxbg"/>
+		<widget name="list" position="150,150" size="780,0" font="Regular;30" foregroundColor="white" backgroundColor="messageboxbg" foregroundColorSelected="white" backgroundColorSelected="bg-selected-text" enableWrapAround="1" transparent="1" itemHeight="45"/>
+		<applet type="onLayoutFinish">
+from enigma import getDesktop, eSize, ePoint
+
+desktop_w = getDesktop(0).size().width()
+desktop_h = getDesktop(0).size().height()
+listcount = 0
+itemheight = 45
+maxwidth = desktop_w - 120
+minwidth = desktop_w  // 2
+
+listwidth = self["list"].instance.size().width() + 120  # 120 for button width and padding
+if listwidth &gt; maxwidth:
+	listwidth = maxwidth
+	
+if listwidth &lt; minwidth:
+	listwidth = minwidth
+
+if self["list"] and self.list is not None:
+	listcount = len(self.list)
+	
+	if listcount &gt; 10:
+		listcount = 10
+
+if not self["text"].text:
+	textsize = (listwidth, 0)
+else:
+	textsizeoriginal = self["text"].getSize()
+	textsize = (listwidth, textsizeoriginal[1])
+	
+listsize = (listwidth, itemheight*listcount)
+
+self["text"].instance.resize(eSize(*textsize))
+self["list"].instance.resize(eSize(*listsize))
+self["text"].instance.move(ePoint(0, 0))
+self["list"].instance.move(ePoint(0, textsize[1] + 30))
+
+wsizex = listwidth
+wsizey = textsize[1] + listsize[1] + 60
+wsize = (wsizex, wsizey)
+self.instance.resize(eSize(*wsize))
+self.instance.move(ePoint((desktop_w-wsizex)//2, (desktop_h-wsizey)//2))</applet>
 	</screen>
 </skin>

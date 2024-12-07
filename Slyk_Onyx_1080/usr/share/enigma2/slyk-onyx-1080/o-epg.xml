@@ -127,9 +127,9 @@ self["bouquetlist"].bouquetNamePadding = 45
 		<panel name="New-Buttons"/>
 		<panel name="MenuButton"/>
 		<panel name="InfoButton-pos2"/>
-		<widget name="tabsrow" position="489,272" size="1431,54" backgroundColor="transparent" transparent="1"/>
-		<widget name="firsttab" position="0,0" size="0,0" font="Bold;30" foregroundColor="white" backgroundColor="#13131b" valign="center" halign="center" noWrap="1" transparent="0" zPosition="2"/>
-		<widget name="guidebouquetlist" position="0,0" size="0,0" font="Regular;30" foregroundColor="white" backgroundColor="mid" valign="center" halign="left" noWrap="1" transparent="1" zPosition="2"/>
+		<!-- <widget name="tabsrow" position="489,272" size="1431,54" backgroundColor="transparent" transparent="1"/> -->
+		<!-- <widget name="firsttab" position="0,0" size="0,0" font="Bold;30" foregroundColor="white" backgroundColor="#13131b" valign="center" halign="center" noWrap="1" transparent="0" zPosition="2"/> -->
+		<!-- <widget name="guidebouquetlist" position="0,0" size="0,0" font="Regular;30" foregroundColor="white" backgroundColor="mid" valign="center" halign="left" noWrap="1" transparent="1" zPosition="2"/> -->
 		<applet type="onLayoutFinish">
 self["bouquetlist"].bouquetNamePadding = 45
 		</applet>

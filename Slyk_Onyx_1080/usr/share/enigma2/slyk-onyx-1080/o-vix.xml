@@ -105,7 +105,7 @@
 		<panel name="MenuButton"/>
 		<applet type="onLayoutFinish">self["list"].instance.setItemHeight(45)</applet>
 	</screen>
-	<screen name="ImageBackup" position="0,0" size="1920,1080" title="Image Manager" flags="wfNoBorder" backgroundColor="mid">
+	<screen name="VIXImageBackup" position="0,0" size="1920,1080" title="Image Manager" flags="wfNoBorder" backgroundColor="mid">
 		<panel name="template1"/>
 		<panel name="h-separator-tr"/>
 		<widget name="lab1" position="527,75" size="905,174" foregroundColor="white" backgroundColor="topmid" font="Regular;30" transparent="1"/>
@@ -153,4 +153,29 @@
 		<widget name="text" position="0,400" size="900,108" font="Regular;30" foregroundColor="white" backgroundColor="messageboxbg" valign="center" halign="center" transparent="1"/>
 		<applet type="onLayoutFinish">self["list"].instance.setItemHeight(45)</applet>
 	</screen>
+	
+	<screen name="HelpMenuVIX" position="fill" flags="wfNoBorder" backgroundColor="mid">
+		<panel name="template1"/>
+		<panel name="h-separator-tr"/>
+		<panel name="title2"/>
+		<widget name="list" textOffset="15,17" position="527,321" size="942,648" foregroundColor="white" backgroundColor="mid" backgroundColorSelected="bg-selected" selectionPixmap="o-selectbars/select-628-48.png" backgroundPixmap="o-selectbars/blank.png" itemHeight="72" font="Regular;35" enableWrapAround="1" scrollbarMode="showNever" transparent="1"/>
+		<widget name="long_key" position="1470,894" size="450,83" font="Regular;35" halign="center" valign="center" foregroundColor="white" backgroundColor="botright" transparent="1"/>
+		<panel name="RemoteControlTemplate"/>
+	</screen>
+	
+	<screen name="VIXDevicesPanel" position="0,0" size="1920,1080" title="Mount Manager" flags="wfNoBorder" backgroundColor="mid">
+		<panel name="HddMount"/>
+	</screen>
+
+	<screen name="VIXDevicePanelConf" position="0,0" size="1920,1080" backgroundColor="mid" flags="wfNoBorder" zPosition="4" title="Choose where to mount your devices to:">
+		<panel name="DevicePanelConf"/>
+	</screen>
+
+	<screen name="VIXChoiceBox" position="center,center" size="900,720" zPosition="5">
+		<widget name="list" position="0,0" size="900,600" font="Regular;30" foregroundColor="white" backgroundColor="messageboxbg" foregroundColorSelected="white" backgroundColorSelected="bg-selected-text" enableWrapAround="1" transparent="1" itemHeight="45"/>
+		<widget name="text" position="0,400" size="900,108" font="Regular;30"/>
+		<widget name="description" position="0,0" size="0,0"  font="Regular;30"/>
+		<applet type="onLayoutFinish">self["list"].instance.setItemHeight(45)</applet>
+	</screen>
+	
 </skin>
