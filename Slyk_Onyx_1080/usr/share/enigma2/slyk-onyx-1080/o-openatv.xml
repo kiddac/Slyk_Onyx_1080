@@ -1181,7 +1181,7 @@ self.instance.move(ePoint((desktop_w - wsizex) // 2, (desktop_h - wsizey) // 2))
 		<widget name="prompt" conditional="prompt" position="32,10" size="948,33" font="Regular;21" foregroundColor="white" backgroundColor="messageboxbg" transparent="1" noWrap="1"/>
 		<ePixmap pixmap="buttons/vkey_text.png" position="30,50" size="934,68" alphatest="blend" zPosition="-4"/>
 		<widget name="text" position="30,69" size="904,36" font="Regular;24" halign="right" noWrap="1" transparent="1" backgroundColor="black" zPosition="3"/>
-		<widget name="list" position="30,120" size="938,340" selectionDisabled="1" backgroundColor="283138"/>
+		<widget name="list" position="30,120" size="938,340" selectionDisabled="1" backgroundColor="#283138"/>
 		<widget name="locale" conditional="locale" position="32,468" size="800,33" font="Regular;21" foregroundColor="white" backgroundColor="messageboxbg" transparent="1" noWrap="1"/>
 		<widget name="mode" conditional="mode" position="892,468" size="60,33" font="Regular;21" foregroundColor="white" backgroundColor="messageboxbg" halign="right" valign="center" transparent="1" noWrap="1"/>
 		<widget name="language" conditional="language" position="0,0" size="0,0" font="Regular;21" transparent="1 "/>
