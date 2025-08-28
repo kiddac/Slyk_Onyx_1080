@@ -81,6 +81,9 @@ self["bouquetlist"].bouquetNamePadding = 45
 		<ePixmap pixmap="o-backgrounds/flare.png" position="296,258" size="375,29" alphatest="blend" zPosition="4"/>
 		<panel name="h-separator-tr"/>
 		<panel name="v-separator-tr"/>
+
+		<widget source="Title" render="Label" position="501,272" size="921,54" font="Bold;30" transparent="1" foregroundColor="white" backgroundColor="topmid" valign="center"/>
+		
 		<!-- now name -->
 		<widget source="Event" render="Label" position="527,32" size="905,39" font="Bold;30" foregroundColor="colour2" backgroundColor="topmid" noWrap="1" transparent="1">
 			<convert type="EventName">Name</convert>
@@ -136,6 +139,7 @@ self["bouquetlist"].bouquetNamePadding = 45
 	</screen>
 	<screen name="GraphicalInfoBarEPG" position="0,0" size="1920,1080" backgroundColor="transparent" flags="wfNoBorder">
 		<!-- backgrounds -->
+		<widget source="Title" render="Label" position="12,678" size="466,54" font="Bold;30" halign="left" valign="center" foregroundColor="white" backgroundColor="mid" transparent="1" zPosition="2"/>
 		<eLabel position="0,732" size="1920,348" backgroundColor="blackglass" transparent="0" zPosition="-2"/>
 		<ePixmap position="0,705" size="1920,375" pixmap="o-infobars/infobar1.png" alphatest="blend" zPosition="-1"/>
 		<eLabel position="0,741" size="1920,264" backgroundColor="#22222e" transparent="0" zPosition="1"/>

@@ -115,7 +115,7 @@
 		</borderset>
 	</windowstyle>
 	<windowstyle type="skinned" id="1">
-		<color name="Background" color="#111119"/>
+		<color name="Background" color="black"/>
 		<color name="LabelForeground" color="white"/>
 		<color name="ListboxBackground" color="#1a1a24"/>
 		<color name="ListboxForeground" color="white"/>
