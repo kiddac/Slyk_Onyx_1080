@@ -564,7 +564,7 @@
 	<screen name="EPGImportProfile" position="0,0" size="1920,1080" backgroundColor="mid" flags="wfNoBorder">
 		<panel name="Setup-Default"/>
 	</screen>
-	<screen name="EPGImportLog" position="0,0" size="1920,977" flags="wfNoBorder" backgroundColor="mid">
+	<screen name="EPGImportLog" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="mid">
 		<panel name="template1"/>
 		<panel name="title2"/>
 		<widget name="list" position="527,32" size="1356,939" font="Console;21" foregroundColor="white" backgroundColor="mid" scrollbarMode="showOnDemand" transparent="1"/>
