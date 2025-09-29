@@ -22,11 +22,25 @@
 	<screen name="Setup-Default" position="0,0" size="1920,1080" backgroundColor="transparent" flags="wfNoBorder">
 		<panel name="template1"/>
 		<panel name="h-separator-tr"/>
-		<panel name="whatson-top"/>
+		<widget name="whatson-top" position="488,0" size="1132,270" zPosition="2" transparent="1">
+			<ePixmap pixmap="whatson-gfx/whatson1.jpg" position="0,0" size="202,270" zPosition="2"/>
+			<ePixmap pixmap="whatson-gfx/whatson2.jpg" position="205,0" size="202,270" zPosition="2"/>
+			<ePixmap pixmap="whatson-gfx/whatson3.jpg" position="410,0" size="202,270" zPosition="2"/>
+			<ePixmap pixmap="whatson-gfx/whatson4.jpg" position="615,0" size="202,270" zPosition="2"/>
+			<ePixmap pixmap="whatson-gfx/whatson5.jpg" position="820,0" size="202,270" zPosition="2"/>
+			<ePixmap pixmap="whatson-gfx/whatson6.jpg" position="1025,0" size="202,270" zPosition="2"/>
+			<ePixmap pixmap="whatson-gfx/whatson7.jpg" position="1230,0" size="202,270" zPosition="2"/>
+		</widget>
 		<panel name="title2"/>
 		<panel name="config"/>
 		<panel name="New-Buttons"/>
 		<ePixmap pixmap="o-backgrounds/menu-gradient.png" position="527,900" size="954,75" alphatest="blend" zPosition="2"/>
+		<applet type="onLayoutFinish">
+if self.instance.getTitle() == "EPG Import Configuration":
+	if "whatson-top" in self:
+		self["whatson-top"].hide()
+</applet>		
+				
 	</screen>
 	<!-- settings screens -->
 	<screen name="Setup" position="0,0" size="1920,1080" backgroundColor="transparent" flags="wfNoBorder">
@@ -46,13 +60,20 @@ if "infoIcon" in self:
 if "menuIcon" in self:
 	self["menuIcon"].hide()
 	
-if self.instance.getTitle() == "EPG Import Configuration":
+if self.instance.getTitle() == "EPG Import Configuration":	
+	if "description" in self:
+			self["description"].instance.move(ePoint(527, 113))
+			self["description"].instance.resize(eSize(960, 203))
+			self["description"].instance.setFont(gFont("Regular", 35))
+			self["description"].instance.setForegroundColor(parseColor("white"))
+			self["description"].instance.setBackgroundColor(parseColor("topmid"))
+	
 	if "footnote" in self:
-		self["footnote"].instance.move(ePoint(1518, 541))
-		self["footnote"].instance.resize(eSize(372, 510))
-		self["footnote"].instance.setFont(gFont("Regular", 27))
-		self["footnote"].instance.setForegroundColor(parseColor("colour2"))
-		self["footnote"].instance.setBackgroundColor(parseColor("midright"))
+		self["footnote"].instance.move(ePoint(527, 200))
+		self["footnote"].instance.resize(eSize(960, 203))
+		self["footnote"].instance.setFont(gFont("Regular", 35))
+		self["footnote"].instance.setForegroundColor(parseColor("white"))
+		self["footnote"].instance.setBackgroundColor(parseColor("topmid"))
 		
 	if "infoIcon" in self:
 		self["infoIcon"].show()
