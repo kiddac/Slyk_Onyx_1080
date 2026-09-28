@@ -460,7 +460,7 @@ self["menu"].l.setFont(0, gFont("Regular", 30))</applet>
 		<widget name="tries" position="15,135" size="810,45" font="Regular;35" foregroundColor="white" backgroundColor="messageboxbg" valign="center" halign="center" transparent="1"/>
 	</screen>
 	<screen name="PinInputPopup" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="mid">
-		<ePixmap pixmap="o-backgrounds/pin-protected.jpg" position="0,0" size="1920,1080" zPosition="-1"/>
+		<ePixmap pixmap="o-backgrounds/pin-protected.png" alphatest="blend" position="0,0" size="1920,1080" zPosition="-1"/>
 		<widget name="service" position="center,56" size="1920,48" font="Bold;39" foregroundColor="white" backgroundColor="topmid" halign="center" transparent="1"/>
 		<widget name="text" position="center,95" size="1920,48" font="Regular;39" foregroundColor="white" backgroundColor="topmid" halign="center" transparent="1"/>
 		<eLabel text="Please enter your PIN" position="0,842" size="1920,48" font="Regular;39" foregroundColor="white" backgroundColor="botmid" halign="center" transparent="1"/>
